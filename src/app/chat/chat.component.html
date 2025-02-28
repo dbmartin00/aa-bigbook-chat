@@ -12,7 +12,7 @@
 
   <div class="mt-4" *ngIf="aiResponse">
     <h5>AI Response:</h5>
-    <div class="alert alert-light border">{{ aiResponse }}</div>
+    <div class="alert alert-light border" [innerHTML]="aiResponse"></div>
   </div>
 </div>
 
