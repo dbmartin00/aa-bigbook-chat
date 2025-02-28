@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h2 class="text-center">AA Big Book, 12&12 Chat</h2>
+
+  <div class="card p-3 shadow">
+    <div class="mb-3">
+      <textarea class="form-control" [(ngModel)]="userMessage" placeholder="Ask a question..." rows="3"></textarea>
+    </div>
+    <button class="btn btn-primary w-100" (click)="sendMessage()" [disabled]="loading">
+      {{ loading ? "Asking AI..." : "Ask AI" }}
+    </button>
+  </div>
+
+  <div class="mt-4" *ngIf="aiResponse">
+    <h5>AI Response:</h5>
+    <div class="alert alert-light border">{{ aiResponse }}</div>
+  </div>
+</div>
+
